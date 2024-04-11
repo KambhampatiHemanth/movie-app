@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom"
 import Cards from "../card/card"
 import { useMovie } from "../customHooks/movieContext"
 import { useType } from "../customHooks/typeContext"
+import axios from 'axios'
 const MovieList = () => {
     
     const {movieList , setMovieList} = useMovie()
@@ -22,7 +23,9 @@ const MovieList = () => {
     }, [movietype])
 
     const getData = async () => {
-        fetch(`https://api.themoviedb.org/3/movie/${movietype ? movietype : "popular"}?api_key=4e44d9029b1270a757cddc766a1bcb63&language=en-US`)
+        const data = await axios(`https://api.themoviedb.org/3/movie/${movietype ? movietype : "popular"}?api_key=90656c5137fef589fb5f3b3951570cbd&language=en-US`)
+        console.log(data.results)
+        fetch(`https://api.themoviedb.org/3/movie/${movietype ? movietype : "popular"}?api_key=90656c5137fef589fb5f3b3951570cbd&language=en-US`)
         .then(res => res.json())
         .then(data => setMovieList(data.results))
         

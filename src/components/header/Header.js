@@ -22,7 +22,7 @@ const Header = () => {
         }
     }
     const getMovieData = ()=>{
-        return fetch(`https://api.themoviedb.org/3/movie/${type ? type : "popular"}?api_key=4e44d9029b1270a757cddc766a1bcb63&language=en-US`)
+        return fetch(`https://api.themoviedb.org/3/movie/${type ? type : "popular"}?api_key=90656c5137fef589fb5f3b3951570cbd&language=en-US`)
         .then(res => res.json())
         .then(data => data.results)
     }
@@ -57,7 +57,7 @@ const Header = () => {
                 <ul class="dropdown">
                     <li><a href="https://www.linkedin.com/in/kambhampati-hemanth/" target="_blank" rel="noopener noreferrer">Profile</a></li>
                     <li><a href="#">Contact Me</a></li>
-                    <li><a href="#">Logout</a></li>
+                    <li><Link to="/">Logout</Link></li>
                 </ul>
                 </li>
             </ul>

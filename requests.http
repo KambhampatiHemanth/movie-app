@@ -1,0 +1,18 @@
+POST http://localhost:3500/signup HTTP/1.1
+content-type : application/json 
+
+{
+    "username" : "jayanth" ,
+    "password" : "1254" ,
+    "email" : "jay@gmail.com"
+}
+
+###
+
+POST http://localhost:3500/signin HTTP/1.1
+content-type : application/json
+
+{
+    "email" : "jaja@gmail.com" ,
+    "password" : "1254"
+}
