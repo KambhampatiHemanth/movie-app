@@ -21,7 +21,7 @@ const Signuppage = ()=>{
       }
     }
     useEffect(()=>{
-      if(navigate) navigator("/signin")
+      if(navigate) navigator("/")
     },[navigate])
     return (
         <div className="container sign-up-mode">

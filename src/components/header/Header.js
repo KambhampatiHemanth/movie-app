@@ -30,7 +30,7 @@ const Header = () => {
     return (
         <div className="header">
             <div className="headerLeft">
-                <Link to="/"><img className="header__icon" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0DBopsVTqQt3QwoKF5-t9Oqjh7Jo9bANykXhbpRcYew&s" alt="logo" /></Link>
+                <Link to="/home"><img className="header__icon" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0DBopsVTqQt3QwoKF5-t9Oqjh7Jo9bANykXhbpRcYew&s" alt="logo" /></Link>
                 <NavLink className="nav-links"  to="/movies/popular"  style={({ isActive }) => ({color: isActive && "red"})}>Popular</NavLink>
                 <NavLink className="nav-links"  to="/movies/top_rated"  style={({ isActive }) => ({color: isActive && "red"})}>Top Rated</NavLink>
                 <NavLink className="nav-links"  to="/movies/upcoming"  style={({ isActive }) => ({color: isActive && "red"})}>Upcoming</NavLink>
